@@ -1,0 +1,43 @@
+# aliases
+alias startx="startx"
+alias dud='du --max-depth=1 -h'
+alias mv='nocorrect mv'
+alias cp='nocorrect cp'
+alias mkdir='nocorrect mkdir'
+alias d='dirs -v'
+alias h=history
+alias ls='ls -G --color=always'
+alias sl='ls'
+alias ll='ls -lh'
+alias la='ls -a'
+alias l='ls -alh'
+alias lm='ls -al | more'
+alias rm='rm -vI'
+alias lapcp='cp -rp ~/junk /mnt/junk/laptop'
+alias ccal='var=$(cal); echo "${var/$(date +%-d)/$(echo -e "\033[1;31m$(date +%-d)\033[0m")}"'
+alias grep='grep --color=always'
+alias irssi='irssi --connect=irc.2600.net --nick=kvantum'
+alias t='vim ~/.TODO'
+alias halt='sudo halt'
+alias bmor='ssh server'
+
+
+alias lad='ls -d .*(/)'							# only show dot-directories
+alias lsa='ls -a .*(.)'							# only show dot-files
+alias lsd='ls -d *(/)'								# only show directories
+alias lse='ls -d *(/^F)'								# only show empty directories
+alias lsnew='=ls -rtlh *(.) | tail $@ 2&>/dev/null'  # only the newest files
+alias lsold="=ls -rtl *(.) | head $@ 2&>/dev/null"   # display the oldest files
+alias lssmall="=ls -Sl *(.) | tail $@ 2&>/dev/null"  # display the smallest files
+alias lsx='ls -l *(*) | head $@ 2&>/dev/null'        # only show executables
+alias lssuid='ls -l *(s,S) | head $@ 2&>/dev/null'   # only show suid-files
+alias lsbig="ls -lSh *(.) | grep -v total | head $@ 2&>/dev/null"    # display the biggest files
+
+
+if (( EUID != 0 )); then
+		alias portsup='sudo cvsup /etc/ports-supfile'
+		alias srcup='sudo cvsup /etc/stable-supfile'
+		alias pkgdb='sudo pkgdb -F'
+		alias portsdb='sudo portsdb -uU'
+		alias makeit='sudo make install clean'
+fi
