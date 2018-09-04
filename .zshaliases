@@ -6,7 +6,7 @@ alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
 alias d='dirs -v'
 alias h=history
-alias ls='ls -G --color=always'
+alias ls='ls --color=always'
 alias sl='ls'
 alias ll='ls -lh'
 alias la='ls -a'
