@@ -1,0 +1,17 @@
+#Keypad
+# Use Ctrl+v to fill the keypress value
+bindkey -s "q" "1"
+bindkey -s "r" "2"
+bindkey -s "s" "3"
+bindkey -s "t" "4"
+bindkey -s "u" "5"
+bindkey -s "v" "6"
+bindkey -s "w" "7"
+bindkey -s "x" "8"
+bindkey -s "y" "9"
+bindkey -s "p" "0"
+bindkey -s "n" "."
+bindkey -s "Q" "/"
+bindkey -s "R" "*"
+bindkey -s "S" "-"
+bindkey -s "l" "+"
