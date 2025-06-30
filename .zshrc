@@ -34,6 +34,13 @@ else
 		print "~/.zshaliases missing?"
 fi
 
+# Include bindkeys
+if [ -f ~/.zshkeys ]; then
+                source ~/.zshkeys
+else
+                print "~/.zshkeys missing?"
+fi
+
 # Directory stack stuff
 DIRSTACKSIZE=15
 setopt PUSHD_SILENT
